@@ -31,11 +31,12 @@ public class Review implements Serializable {
 	public Review() {
 	}
 
-	public Review(Long id, String text, User user) {
+	public Review(Long id, String text, User user, Movie movie) {
 		super();
 		this.id = id;
 		this.text = text;
 		this.user = user;
+		this.movie = movie;
 	}
 
 	public Long getId() {
