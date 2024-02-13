@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import ButtonIcon from 'components/ButtonIcon';
 
 import './styles.css';
 
@@ -26,10 +26,8 @@ const Login = () => {
             required
           />
         </div>
-        <div className="login-submit bg-warning">
-          <Link to="/">
-            <h4>FAZER LOGIN</h4>
-          </Link>
+        <div className="login-submit">
+        <ButtonIcon text="Fazer login" />
         </div>
       </form>
     </div>
