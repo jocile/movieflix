@@ -1,4 +1,6 @@
-import { useContext, useState } from 'react';
+import { Link } from 'react-router-dom';
+
+import './styles.css';
 
 const Login = () => {
 
@@ -6,7 +8,7 @@ const Login = () => {
     <div className="base-card login-card">
       <h1>LOGIN</h1>
       <form>
-        <div>
+        <div className="mb-4">
           <input
             type="text"
             placeholder="Email"
@@ -15,23 +17,19 @@ const Login = () => {
             pattern="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$"
             title="Email inválido"
           />
-          <div>
-            Campo obrigatório
-          </div>
         </div>
-        <div>
+        <div className="mb-2">
           <input
             type="password"
             placeholder="Password"
             name="password"
             required
           />
-          <div>
-            Campo obrigatório
-          </div>
         </div>
-        <div>
-          <h1>Fazer login</h1>
+        <div className="login-submit bg-warning">
+          <Link to="/">
+            <h4>FAZER LOGIN</h4>
+          </Link>
         </div>
       </form>
     </div>
