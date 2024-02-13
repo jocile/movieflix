@@ -1,4 +1,5 @@
 import { ReactComponent as HomeImage } from 'assets/images/main-image.svg';
+import Login from './Login';
 
 const Home = () => {
   return (
@@ -8,7 +9,9 @@ const Home = () => {
           <p>Diga o que você achou do seu filme favorito</p>
           <HomeImage />
         </div>
-
+        <div className="home-form-container">
+          <Login />
+        </div>
       </div>
   );
 };
