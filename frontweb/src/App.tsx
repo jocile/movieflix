@@ -1,13 +1,10 @@
-import './assets/styles/custom.scss';
+import 'assets/styles/custom.scss';
 import './App.css';
-import Navbar from 'components/Navbar';
+import MyRoutes from './MyRoutes';
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <h1>Filmes</h1>
-    </>
+    <MyRoutes />
   );
 }
 
