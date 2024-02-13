@@ -1,6 +1,15 @@
+import { ReactComponent as HomeImage } from 'assets/images/main-image.svg';
+
 const Home = () => {
   return (
-    <h1>Home</h1>
+      <div className="home-container">
+        <div className="home-banner-container">
+          <h1>Avalie Filmes</h1>
+          <p>Diga o que você achou do seu filme favorito</p>
+          <HomeImage />
+        </div>
+
+      </div>
   );
 };
 
