@@ -2,10 +2,6 @@
 
 # Movieflix
 
-<!-- Status -->
-
- 🚧  Status Backend ok; 🚀 Frontend em desenvolvimento...  🚧
-
 ---
 
 ![Github top language](https://img.shields.io/github/languages/top/jocile/movieflix?color=56BEB8)
@@ -25,6 +21,8 @@
 
 ## :dart: Sobre
 
+<img alt="App print" src="app-print.png" align="right">
+
 O sistema movieflix usa spring boot como backend, e o ReactJS como frontweb, onde é desenvolvido como desafio do Bootcamp [DevSuperior](https://devsuperior.com.br/).
 
 O sistema MovieFlix consiste em um banco de filmes, os quais podem ser listados e avaliados pelos usuários. Usuários podem ser visitantes (VISITOR) e membros (MEMBER). Apenas usuários membros podem inserir avaliações no sistema.
@@ -35,7 +33,7 @@ Ao selecionar um filme da listagem, é mostrada uma página de detalhes, onde é
 
 Um usuário possui nome, email e senha, sendo que o email é seu nome de usuário. Cada filme possui um título, subtítulo, uma imagem, ano de lançamento, sinopse, e um gênero. Os usuários membros podem registrar avaliações para os filmes. Um mesmo usuário membro pode deixar mais de uma avaliação para o mesmo filme.
 
-![Diagrama conceitual](diagrama.png)
+<img alt="Diagrama" src="diagrama.png">
 
 ## :sparkles: Caracteristicas
 
@@ -78,13 +76,24 @@ As seguintes tecnologias são utilizadas no backend do projeto:
 - [Java JDK 11](https://docs.oracle.com/en/java/javase/11/);
   - [Maven builder](https://maven.apache.org/);
   - [Spring Boot framework](https://glysns.gitbook.io/springframework/);
-    - [Spring Data JPA](https://docs.spring.io/spring-boot/docs/2.5.6/reference/htmlsingle/#boot-Caracteristicas-jpa-and-spring-data);
-- [H2 in-memory database](https://www.h2database.com/);
+    - [Spring Data JPA][JPA]
   - [PgAdmin database administration platform](https://www.pgadmin.org/);
+  - Login [OAuth2][OAuth2]
+- Interceptors
+- [Armazenamento de dados][JPA]
+  - [Acesso a dados][AccessingData]
+  - JSON parse / stringify
+- Estado global com Context API
+- Fluxos de autenticação e autorização
+  - Rotas protegidas
+  - Redirecionamentos de login e de autorização
+  - Redirecionamentos especiais para experiência do usuário (UX)
+  - Permissionamento em nível de rotas
+  - Restrição de conteúdo (UI) baseada em perfil de usuário
 
 No Frontend web são usadas as seguintes tecnologias:
 
-- ReactJS
+- [ReactJS][ReactJS]
   - Criação de projeto
   - Estrutura do projeto
   - Componentes
@@ -94,21 +103,21 @@ No Frontend web são usadas as seguintes tecnologias:
   - HTML
   - CSS
     - Estilização manual
-    - Flexbox
+    - [Flexbox][Flexbox]
     - Bootstrap
-    - Responsividade
-  - Execução de projeto Figma
+    - [Responsividade][CSSFlexbox]
+  - Execução de [projeto Figma][Figma]
 - Rotas
-  - React Router DOM
+  - [React Router DOM][ReactRouting]
   - Rotas e links
 - Formulários
   - Tratamento de eventos
-  - Manipulação do estado do formulário
+  - [Manipulação do estado do formulário][ReactForms]
   - Submissão de formulário
 
 ## :white_check_mark: Requerimentos
 
-- Para o Backend - Antes de iniciar :checkered_flag:, é necessário ter o ambiente [Java JDK 11](https://www.oracle.com/java/Tecnologias/downloads/#java11), [Git](https://git-scm.com) e [Maven](https://maven.apache.org/install.html) instalados.
+- Para o Backend - Antes de iniciar :checkered_flag:, é necessário ter o ambiente [Java JDK 11][JDK], [Git][Git] e [Maven][Maven] instalados.
 - Para o Frontend - :checkered_flag:, é necessário ter instalados o ambiente [NodeJS](https://nodejs.org/en) para executar o ReactJS, e  o [Yarn](https://classic.yarnpkg.com/en/docs/install) para gerenciar as dependências.
 
 ## :checkered_flag: Iniciando
@@ -131,6 +140,8 @@ cd .\backend
 mvnw spring-boot:run
 ```
 
+### :tada: Visualizando o App
+
 > A backend API será inicializada no browser: <http://localhost:8080>\
 > O banco de dados in-memory H2 pode ser visualizado em: <http://localhost:8080/h2-console>\
 > 🚧 O frontend web 🚀 foi inicializado com [create-react-app.dev](https://create-react-app.dev) 🚧
@@ -150,34 +161,74 @@ yarn start
 
 > Isto irá Executar o aplicativo no modo de desenvolvimento.\
 > O browser exibirá a app na página: <http://localhost:3000> para visualizá-lo no navegador.\
+> Para fazer Login como visitante use: `bob@gmail.com`\
+> Para fazer Login como membro use: `ana@gmail.com`\
+> Use a senha: `123456`\
 > A página será recarregada se você fizer edições.\
 > Você também verá quaisquer erros de lint no console.
 
 ## :books: Referências
 
-- :file_folder: [Bootcamp Documentação SDS 5](https://github.com/devsuperior/sds5);
-- :file_folder: [Collection do Postman para testar a API](https://www.getpostman.com/collections/72a46c64473b7611a021);
-- :art: [Protótipos de tela para o Frontend no Figma](https://www.figma.com/file/Yul1TnqQXmBsLwm5h5nvJu/MovieFlix-front-inicial);
-- :books: [Official Apache Maven documentation](https://maven.apache.org/guides/index.html);
-- :link: [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.4.12/maven-plugin/reference/htmlsingle/);
-- :link: [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.4.12/maven-plugin/reference/html/#build-image);
-- :link: [Spring Web](https://docs.spring.io/spring-boot/docs/2.5.6/reference/htmlsingle/#Caracteristicas.developing-web-applications);
-  - :link: [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/);
-  - :link: [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/);
-- :link: [Spring Data JPA](https://docs.spring.io/spring-boot/docs/2.5.6/reference/htmlsingle/#Caracteristicas.sql.jpa-and-spring-data);
-  - :link: [Accessing Data with JPA](https://spring.io/guides/gs/accessing-data-jpa/);
-- :link: [Spring Security](https://docs.spring.io/spring-boot/docs/2.7.0/reference/htmlsingle/#web.security);
-  - :link: [Securing a Web Application](https://spring.io/guides/gs/securing-web/);
-  - :link: [Enabling Cross Origin Requests for a RESTful Web Service](https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter)
-  - :link: [Spring Boot and OAuth2](https://spring.io/guides/tutorials/spring-boot-oauth2/);
-  - :link: [Authenticating a User with LDAP](https://spring.io/guides/gs/authenticating-ldap/);
-- :books: Para aprender React, confira a [documentação do React](https://pt-br.react.dev/)
-- :page_facing_up: [Formulários no ReactJS](https://pt-br.reactjs.org/docs/forms.html)
-- :link: [Roteamento no ReactJS](https://reactrouter.com/en/main/components/routes)
-- :link: [Recursos para o Frontend](https://github.com/devsuperior/dscatalog-resources/blob/9b5846b1157b296c3012f16c817f70ad1929fa6f/frontend-web/README.md)
-- :wrench: [TreinaWeb - Instalando e gerenciando várias versões do NodeJS](https://www.treinaweb.com.br/blog/instalando-e-gerenciando-varias-versoes-do-node-js-com-nvm/)
-- :art: [W3Schools Flexbox](https://www.w3schools.com/css/css3_flexbox.asp)
-- :art: [Flexbox](https://flexboxfroggy.com/)
-- :art: [CSS Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox)
+- :file_folder: [Bootcamp Documentação SDS 5][Bootcamp];
+- :file_folder: [Collection do Postman para testar a API][Postman];
+- :art: [Protótipos de tela para o Frontend no Figma][Figma];
+  
+<details><summary><b>Mostrar referências para o Backend</b></summary>
 
-[Back to top](#top)
+- :books: [Official Apache Maven documentation][Maven];
+- :link: [Spring Boot Maven Plugin Reference Guide][Maven];
+- :link: [Create an OCI image][OCI];
+- :link: [Spring Web][SpringWeb];
+  - :link: [Building a RESTful Web Service][SpringREST];
+  - :link: [Serving Web Content with Spring MVC][SpringMVC];
+- :link: [Spring Data JPA][JPA];
+  - :link: [Accessing Data with JPA][AccessingData];
+- :link: [Spring Security][Security];
+  - :link: [Securing a Web Application][SecuringWeb];
+  - :link: [Enabling Cross Origin Requests for a RESTful Web Service][CORS];
+  - :link: [Spring Boot and OAuth2][OAuth2];
+  - :link: [Authenticating a User with LDAP][LDAP];
+
+</details>
+
+<details><summary><b>mostrar referências para o Frontend</b></summary>
+
+- :books: Para aprender React, confira a [documentação do React][ReactDocs]
+- :page_facing_up: [Formulários no ReactJS][ReactForms]
+- :link: [Roteamento no ReactJS][ReactRouting]
+- :link: [Recursos para o Frontend][FrontendResources]
+- :wrench: [TreinaWeb - Instalando e gerenciando várias versões do NodeJS][NodeJS]
+- :art: [W3Schools Flexbox][W3Schools]
+- :art: [Flexbox][Flexbox]
+- :art: [CSS Flexbox][CSSFlexbox]
+
+</details>
+
+[AccessingData]: https://spring.io/guides/gs/accessing-data-jpa/
+[Bootcamp]: https://github.com/devsuperior/sds5
+[CORS]: https://spring.io/blog/2022/02/21/spring-security-without-the-websecurityconfigureradapter
+[CSSFlexbox]: https://css-tricks.com/snippets/css/a-guide-to-flexbox
+[Flexbox]: https://flexboxfroggy.com/
+[Figma]: https://www.figma.com/file/Yul1TnqQXmBsLwm5h5nvJu/MovieFlix-front-inicial
+[FrontendResources]: https://github.com/devsuperior/dscatalog-resources/blob/9b5846b1157b296c3012f16c817f70ad1929fa6f/frontend-web/README.md
+[Git]: https://git-scm.com
+[JDK]: https://www.oracle.com/java/Tecnologias/downloads/#java11
+[JPA]: https://docs.spring.io/spring-boot/docs/2.5.6/reference/htmlsingle/#Caracteristicas.sql.jpa-and-spring-data
+[LDAP]: https://spring.io/guides/gs/authenticating-ldap/
+[Maven]: https://maven.apache.org/guides/index.html
+[NodeJS]: https://www.treinaweb.com.br/blog/instalando-e-gerenciando-varias-versoes-do-node-js-com-nvm/
+[OAuth2]: https://spring.io/guides/tutorials/spring-boot-oauth2/
+[OCI]: https://docs.spring.io/spring-boot/docs/2.4.12/maven-plugin/reference/html/#build-image
+[Postman]: https://www.getpostman.com/collections/72a46c64473b7611a021
+[ReactDocs]: https://pt-br.react.dev/
+[ReactForms]: https://pt-br.reactjs.org/docs/forms.html
+[ReactJS]: https://pt-br.react.dev/
+[ReactRouting]: https://reactrouter.com/en/main/components/routes
+[Security]: https://docs.spring.io/spring-boot/docs/2.7.0/reference/htmlsingle/#web.security
+[SecuringWeb]: https://spring.io/guides/gs/securing-web/
+[SpringWeb]: https://docs.spring.io/spring-boot/docs/2.5.6/reference/htmlsingle/#Caracteristicas.developing-web-applications
+[SpringREST]: https://spring.io/guides/gs/rest-service/
+[SpringMVC]: https://spring.io/guides/gs/serving-web-content/
+[W3Schools]: https://www.w3schools.com/css/css3_flexbox.asp
+
+[Voltar para o topo da página](#top)
