@@ -16,6 +16,7 @@ const Login = () => {
   const {
     register,
     handleSubmit,
+    formState: { errors },
   } = useForm<FormData>();
 
   const onSubmit = (formData: FormData) => {
@@ -39,26 +40,40 @@ const Login = () => {
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-4">
           <input
-            {...register('username')}
+            {...register('username', {
+              required: 'Campo obrigatório',
+              pattern: {
+                value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                message: 'Email inválido',
+              },
+            })}
             type="text"
+            className={`form-control base-input ${errors.username ? 'is-invalid' : ''
+              }`}
             placeholder="Email"
             name="username"
-            required
-            pattern="^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$"
-            title="Email inválido"
           />
+          <div className="invalid-feedback d-block">
+            {errors.username?.message}
+          </div>
         </div>
         <div className="mb-2">
           <input
-            {...register('password')}
+            {...register('password', {
+              required: 'Campo obrigatório',
+            })}
             type="password"
+            className={`form-control base-input ${errors.password ? 'is-invalid' : ''
+              }`}
             placeholder="Password"
             name="password"
-            required
           />
-        </div>
-        <div className="login-submit">
-          <ButtonIcon text="Fazer login" />
+          <div className="invalid-feedback d-block">
+            {errors.password?.message}
+          </div>
+          <div className="login-submit">
+            <ButtonIcon text="Fazer login" />
+          </div>
         </div>
       </form>
     </div>
