@@ -1,10 +1,20 @@
-import 'assets/styles/custom.scss';
+import './assets/styles/custom.scss';
 import './App.css';
-import AppRoutes from './AppRoutes';
 
-function App() {
+import AppRoutes from 'AppRoutes';
+import { useState } from 'react';
+import { AuthContext, AuthContextData } from 'AuthContext';
+
+
+const App = () => {
+  const [authContextData, setAuthContextData] = useState<AuthContextData>({
+    authenticated: false,
+  });
+  
   return (
-    <AppRoutes />
+    <AuthContext.Provider value={{ authContextData, setAuthContextData }}>
+      <AppRoutes />
+    </AuthContext.Provider>
   );
 }
 
