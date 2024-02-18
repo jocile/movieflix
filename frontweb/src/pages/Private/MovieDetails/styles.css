@@ -1,0 +1,50 @@
+.details-contanier {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  font-size: 24px;
+}
+
+.details-content-contanier {
+  width: 265px;
+  margin-bottom: 18px;
+}
+
+.details-content-contanier h1 {
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+}
+
+.review-content-contanier {
+  padding: 20px 10px;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.listing-content-contanier {
+  padding: 15px 10px;
+}
+
+@media (min-width: 576px) {
+  .details-contanier {
+    padding: 20px;
+  }
+
+  .details-content-contanier {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .details-contanier {
+    padding: 40px;
+  }
+
+  .details-content-contanier {
+    margin-bottom: 25px;
+  }
+ .details-content-contanier h1 {
+  font-size: 2.0em;
+ }
+}
