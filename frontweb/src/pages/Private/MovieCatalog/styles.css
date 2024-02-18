@@ -1,0 +1,37 @@
+.catalog-container {
+  padding: 15px;
+}
+
+.catalog-container h1 {
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+  margin-bottom: 40px;
+}
+
+.catalog-container p {
+  font-size: 18px;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+}
+
+@media (min-width: 576px) {
+  .catalog-container {
+    padding: 20px;
+  }
+
+  .catalog-container h1 {
+    font-size: 48px;
+  }
+
+  .catalog-container p {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 768px) {
+    .catalog-container {
+      padding: 40px;
+    }
+}  
