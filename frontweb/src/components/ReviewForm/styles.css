@@ -1,0 +1,10 @@
+.save-submit {
+  margin-top: 20px;
+}
+
+@media (min-width: 576px) {
+  .save-submit {
+    display: flex;
+    justify-content: center;
+  }
+}

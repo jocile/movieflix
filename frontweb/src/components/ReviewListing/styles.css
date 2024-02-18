@@ -1,0 +1,26 @@
+.user-card {
+  display: flex;
+}
+
+.user-card h6 {
+  margin-left: 15px;
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+}
+
+.review-card {
+  padding: 10px 12px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #e1e1e1;
+  border-radius: 4px;
+}
+
+.review-card p {
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: -0.015em;
+  color: #9e9e9e;
+}
