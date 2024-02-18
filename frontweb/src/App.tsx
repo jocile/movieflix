@@ -1,10 +1,10 @@
 import 'assets/styles/custom.scss';
 import './App.css';
-import MyRoutes from './MyRoutes';
+import AppRoutes from './AppRoutes';
 
 function App() {
   return (
-    <MyRoutes />
+    <AppRoutes />
   );
 }
 
