@@ -6,45 +6,54 @@
 }
 
 .details-content-contanier {
-  width: 265px;
-  margin-bottom: 18px;
-}
-
-.details-content-contanier h1 {
-  font-weight: 700;
-  letter-spacing: -0.015em;
-  color: #ffffff;
+  padding: 10px;
+  margin-bottom: 25px;
 }
 
 .review-content-contanier {
   padding: 20px 10px;
   width: 100%;
-  margin-bottom: 18px;
+  margin-bottom: 25px;
 }
 
-.listing-content-contanier {
+.review-listing-content-contanier {
   padding: 15px 10px;
 }
 
 @media (min-width: 576px) {
-  .details-contanier {
+  .review-content-contanier {
     padding: 20px;
   }
 
-  .details-content-contanier {
-    width: 100%;
+  .movie-details-contanier {
+    padding: 20px;
+  }
+
+  .movie-details-card {
+    padding: 20px;
   }
 }
 
-@media (min-width: 992px) {
-  .details-contanier {
+@media (min-width: 768px) {
+  .review-content-contanier {
+    padding: 40px;
+  }
+  
+  .movie-details-contanier {
     padding: 40px;
   }
 
-  .details-content-contanier {
-    margin-bottom: 25px;
+  .movie-details-card {
+    padding: 40px;
   }
- .details-content-contanier h1 {
-  font-size: 2.0em;
- }
+
+  .review-listing-content-contanier {
+    padding: 40px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .movie-details-contanier {
+    padding: 50px 140px;
+  }
 }

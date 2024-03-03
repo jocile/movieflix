@@ -37,8 +37,8 @@ const MovieDetails = () => {
 
   return (
     <div className="details-contanier">
-      <div className="details-content-contanier">
-      <MovieDetailsCard movieId={movieId}/>
+      <div className="base-card details-content-contanier">
+        <MovieDetailsCard movieId={movieId} />
       </div>
 
       {hasAnyRoles(['ROLE_MEMBER']) && (
@@ -47,7 +47,9 @@ const MovieDetails = () => {
         </div>
       )}
 
-      <ReviewListing reviews={reviews} />
+      <div className="base-card review-listing-content-contanier">
+        <ReviewListing reviews={reviews} />
+      </div>
     </div>
   );
 };
