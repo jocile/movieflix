@@ -1,0 +1,78 @@
+.title-year-subtitle-container {
+  font-weight: bold;
+  letter-spacing: -0.015em;
+}
+
+.title-year-subtitle-container h1 {
+  font-size: 20px;
+  color: #FFFFFF;
+}
+
+.title-year-subtitle-container h6 {
+  font-size: 16px;
+  color: #FFC700;
+}
+
+.title-year-subtitle-container p {
+  font-weight: normal;
+  font-size: 14px;  
+  color: #FFFFFF;
+}
+
+.movie-synopsis-container {
+  padding: 15px 15px 0px 15px;
+  border: 1px solid #E1E1E1;
+  margin-bottom: 25px;
+  border-radius: 10px;  
+}
+
+.movie-synopsis-container p {
+  font-weight: normal;
+  font-size: 16px;
+  text-align: justify;
+  letter-spacing: -0.015em;
+  color: #9E9E9E;
+}
+
+.img-container {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.img-container img {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .img-container img {
+    width: 608px;
+    height: 382px;
+  }  
+}
+
+@media (min-width: 1200px) {
+  .img-container img {
+    width: 500px;
+    height: 314.23px;
+  }
+
+  .title-year-subtitle-container h1 {
+    font-size: 36px;
+  }
+  
+  .title-year-subtitle-container h6 {
+    font-size: 24px;
+  }
+  
+  .title-year-subtitle-container p {
+    font-size: 24px;  
+  }
+
+  .movie-synopsis-container {
+    min-height: 293px;
+  }
+
+  .movie-synopsis-container p {
+    font-size: 18px;
+  }  
+ }

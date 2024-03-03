@@ -6,6 +6,7 @@ import { useParams } from 'react-router-dom';
 import { Review } from 'types/review';
 import { hasAnyRoles } from 'util/auth';
 import { requestBackend } from 'util/requests';
+import MovieDetailsCard from './MovieDetailsCard';
 import './styles.css';
 
 type urlParams = {
@@ -37,7 +38,7 @@ const MovieDetails = () => {
   return (
     <div className="details-contanier">
       <div className="details-content-contanier">
-        <h1>Tela detalhes do filme id: {movieId}</h1>
+      <MovieDetailsCard movieId={movieId}/>
       </div>
 
       {hasAnyRoles(['ROLE_MEMBER']) && (
