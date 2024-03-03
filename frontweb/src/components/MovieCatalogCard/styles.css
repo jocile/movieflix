@@ -1,0 +1,55 @@
+.movie-catalog-card {
+  margin-bottom: 20px;
+  min-height: 322px;
+}
+
+.card-top-container {
+  text-align: center;
+  padding-top: 26px;
+}
+
+.card-top-container img {
+    width: 100%;
+}
+
+.card-bottom-container {
+  padding: 10px 20px 0 15px;
+}
+
+.card-bottom-container h1 {
+  font-size: 20px;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+}
+
+.card-bottom-container h6 {
+  font-size: 16px;
+  letter-spacing: -0.015em;
+  color: #ffc700;
+}
+
+.card-bottom-container p {
+  font-weight: normal;
+  font-size: 14px;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+}
+
+@media (min-width: 768px) {
+  .movie-catalog-card {
+    margin-bottom: 40px;
+    min-height: 364px;
+  }    
+}
+
+@media (min-width: 992px) {
+  .movie-catalog-card {
+    min-height: 457px;
+  }    
+}
+
+@media (min-width: 1200px) {
+  .movie-catalog-card {
+    min-height: 322px;
+  }    
+}
